@@ -1,6 +1,6 @@
 import { getSafetyQuestions } from "../clientSide";
 test("getSafetyQuestions : pick default language", () => {
-  expect(getSafetyQuestions("ccd")).toStrictEqual({
+  expect(getSafetyQuestions("en_GB")).toStrictEqual({
     question1: "Where my parents met?",
     question2: "What is the name of your first pet?",
     question3: "What is your home town?",
