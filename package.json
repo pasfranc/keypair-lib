@@ -1,6 +1,6 @@
 {
   "name": "keypair-lib",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Keypair library",
   "main": "lib/index.js",
   "scripts": {

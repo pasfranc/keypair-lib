@@ -2,6 +2,6 @@ export {
   getSafetyQuestions,
   recoveryKeypair,
   verifyAnswers,
-  sanitizeAnswers
+  sanitizeAnswers,
 } from "./clientSide";
 export { createPBKDF } from "./serverSide";
