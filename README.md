@@ -14,7 +14,7 @@ npm i keypair-lib
 ```ts
 import { getSafetyQuestions } from 'keypair-lib'
 
-    getSafetyQuestions('en_GB'); 
+getSafetyQuestions('en_GB'); 
 ```
 outcome:
 
@@ -31,14 +31,13 @@ outcome:
 ```ts
 import { createPBKDF } from 'keypair-lib'
 
-  const userData = {
+const userData = {
     username: "JohnDoe",
     email: "john@doe.com",
     phone: "12345678",
-  };
+};
 
-  const data = await createPBKDF(userData);
-  });
+const data = await createPBKDF(userData);
 ```
 content of data will be:
 
@@ -51,15 +50,15 @@ content of data will be:
 ```ts
 import { sanitizeAnswers } from 'keypair-lib'
 
-  const answers = {
+const answers = {
     question1: "L'Aquila",
     question2: "C arl",
     question3: "88 ggg",
     question4: "null",
     question5: "null",
-  };
+};
 
-  sanitizeAnswers(answers);
+sanitizeAnswers(answers);
 ```
 outcome:
 
@@ -76,17 +75,17 @@ outcome:
 ```ts
 import { recoveryKeypair } from 'keypair-lib'
 
-  const answers = {
+const answers = {
     question1: "Paris",
     question2: "ScoobyDoo",
     question3: "Amsterdam",
     question4: "null",
     question5: "null",
-  };
-  const PBKDF = "qf3skXnPGFMrE28UJS7S8BdT8g==";
-  const username = "user";
+};
+const PBKDF = "qf3skXnPGFMrE28UJS7S8BdT8g==";
+const username = "user";
 
-  const data = await recoveryKeypair(answers, PBKDF, username);
+const data = await recoveryKeypair(answers, PBKDF, username);
 ```
 outcome:
 
@@ -112,19 +111,19 @@ outcome:
 ```ts
 import { verifyAnswers } from 'keypair-lib'
 
-    const answers = {
-        question1: "Paris",
-        question2: "ScoobyDoo",
-        question3: "Amsterdam",
-        question4: "null",
-        question5: "null",
-    };
-    const PBKDF = "qf3skXnPGFMrE28UJS7S8BdT8g==";
-    const publicKey =
-        "BDYfET6GOWSTizMYIRfcthw2MKksTpg+f8LR0ndq6fRxOLfhT7d1IjvwkvV0LzlzHuGat8SF9unNwhA3alpQ8So=";
-    const username = "user";
+const answers = {
+    question1: "Paris",
+    question2: "ScoobyDoo",
+    question3: "Amsterdam",
+    question4: "null",
+    question5: "null",
+};
+const PBKDF = "qf3skXnPGFMrE28UJS7S8BdT8g==";
+const publicKey =
+    "BDYfET6GOWSTizMYIRfcthw2MKksTpg+f8LR0ndq6fRxOLfhT7d1IjvwkvV0LzlzHuGat8SF9unNwhA3alpQ8So=";
+const username = "user";
 
-    const data = await verifyAnswers(answers, PBKDF, username, publicKey);
+const data = await verifyAnswers(answers, PBKDF, username, publicKey);
 ```
 outcome:
 
