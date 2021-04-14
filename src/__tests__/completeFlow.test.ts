@@ -1,5 +1,9 @@
 import { createPBKDF } from "../serverSide";
-import { getSafetyQuestions, recoveryKeypair, verifyAnswers } from "../clientSide";
+import {
+  getSafetyQuestions,
+  recoveryKeypair,
+  verifyAnswers,
+} from "../clientSide";
 /*
   Here we will test a complete flow
   1. We will create on serverside a PBKDF for a specific user
@@ -11,7 +15,6 @@ import { getSafetyQuestions, recoveryKeypair, verifyAnswers } from "../clientSid
 */
 
 test("completeFlow", async () => {
-  
   //1. We will create on serverside a PBKDF for a specific user
   const userData = {
     email: "john@doe.com",
@@ -74,7 +77,12 @@ test("completeFlow", async () => {
     question5: "Gervasoni",
   };
 
-  const allAnswersData = await verifyAnswers(allAnswers, PBKDF, username, publicKey);
+  const allAnswersData = await verifyAnswers(
+    allAnswers,
+    PBKDF,
+    username,
+    publicKey
+  );
 
   expect(allAnswersData).toStrictEqual(true);
 
@@ -87,8 +95,12 @@ test("completeFlow", async () => {
     question5: "Gervasoni",
   };
 
-  const allAnswersOneWrongData = await verifyAnswers(allAnswersOneWrong, PBKDF, username, publicKey);
+  const allAnswersOneWrongData = await verifyAnswers(
+    allAnswersOneWrong,
+    PBKDF,
+    username,
+    publicKey
+  );
 
   expect(allAnswersOneWrongData).toStrictEqual(false);
-
 });
