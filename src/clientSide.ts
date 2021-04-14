@@ -7,7 +7,8 @@ import {
 } from "./service/fileService";
 import * as dotenv from "dotenv";
 
-const DEFAULT_CLIENT_SIDE_CONTRACT = "./zencode/Keypair-Creation-Client-Side.zen";
+const DEFAULT_CLIENT_SIDE_CONTRACT =
+  "./zencode/Keypair-Creation-Client-Side.zen";
 const REGULAR_EXPRESSION: RegExp = /\W/gi;
 const EMPTY_STRING: string = "";
 const DEFAULT_USER: string = "user";
