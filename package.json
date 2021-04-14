@@ -24,7 +24,7 @@
     "keypair",
     "zencode"
   ],
-  "author": "",
+  "author": "Pasquale Pio Francavilla <pasfranc@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^8.2.0",
@@ -41,5 +41,13 @@
   },
   "files": [
     "lib/**/*"
-  ]
+  ],
+  "bugs": {
+    "url": "https://github.com/pasfranc/keypair-lib/issues"
+  },
+  "homepage": "https://github.com/pasfranc/keypair-lib#readme",
+  "directories": {
+    "doc": "docs",
+    "lib": "lib"
+  }
 }
