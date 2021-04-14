@@ -1,9 +1,8 @@
-# Keypairoom
+# Keypair lib
 
 Component to generate and regenerate a keypair, in a deterministic and private way.
 The cryptographic part consists of two [Zenroom](zenroom.org) smart contracts, the first executed server-side to generate a seed (based on public data such as user name), the second generate client side, based on the output of the first smart contract and on private information, namely "The challenges". 
-  
-# Keypair lib
+
 
 To configure backend environment variables please put an .env file at the top of your project like this or rename .env.sample to .env: 
 
