@@ -1,7 +1,6 @@
 import { zencode_exec } from "zenroom";
 import { UserChallenges } from "./model/userChallenges";
 import {
-  fileExists,
   readJSONFromFile,
   readStringFromFile,
 } from "./service/fileService";
@@ -23,14 +22,7 @@ export const getSafetyQuestions = (userLocale: string) => {
     locale +
     ".json";
   const defaultPropertiesFileName = __dirname + "/props/questions-en_GB.json";
-  console.log(__dirname);
-  let questions: any;
-  if (fileExists(propertiesFileName)) {
-    questions = readJSONFromFile(propertiesFileName);
-  } else {
-    questions = readJSONFromFile(defaultPropertiesFileName);
-  }
-  return questions;
+  return readJSONFromFile(propertiesFileName, defaultPropertiesFileName);
 };
 
 export const sanitizeAnswers = (answers: any) => {
@@ -50,10 +42,7 @@ export async function recoveryKeypair(
   username: string
 ) {
   dotenv.config();
-  const clientSideContract = process.env.CLIENT_SIDE_CONTRACT
-    ? process.env.CLIENT_SIDE_CONTRACT
-    : DEFAULT_CLIENT_SIDE_CONTRACT;
-  const CLIENT_SIDE_CONTRACT = readStringFromFile(clientSideContract);
+  const CLIENT_SIDE_CONTRACT = readStringFromFile(process.env.CLIENT_SIDE_CONTRACT!, DEFAULT_CLIENT_SIDE_CONTRACT);
   const user = username ? username : DEFAULT_USER;
 
   const keys: any = {
