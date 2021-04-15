@@ -23,6 +23,7 @@ export const getSafetyQuestions = (userLocale: string) => {
     locale +
     ".json";
   const defaultPropertiesFileName = __dirname + "/props/questions-en_GB.json";
+  console.log(__dirname);
   let questions: any;
   if (fileExists(propertiesFileName)) {
     questions = readJSONFromFile(propertiesFileName);

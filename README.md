@@ -140,11 +140,11 @@ BACKEND_PUBLIC_KEY=BBCQg21VcjsmfTmNsg+I+8m1Cm0neaYONTqRnXUjsJLPa8075IYH+a9w2wRO7
 BACKEND_PASSWORD=myVerySecretPassword
 
 #UNCOMMENT HERE IF YOU WANT TO PUT A DIFFERENT CONTRACT
-#SERVER_SIDE_CONTRACT=zencode/Keypair-Creation-Server-Side.zen
-#CLIENT_SIDE_CONTRACT=zencode/Keypair-Creation-Client-Side.zen
+#SERVER_SIDE_CONTRACT=./src/zencode/Keypair-Creation-Server-Side.zen
+#CLIENT_SIDE_CONTRACT=./src/zencode/Keypair-Creation-Client-Side.zen
 
 #UNCOMMENT HERE IF YOU WANT TO OVERRIDE FOLDER OR FILENAME default: prop/questions-en_GB.json
-#QUESTION_FOLDER=props/
+#QUESTION_FOLDER=.src/props/
 #QUESTION_FILE_PREPEND=questions-
 ``` 
  
