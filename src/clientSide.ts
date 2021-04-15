@@ -7,7 +7,8 @@ import {
 } from "./service/fileService";
 import * as dotenv from "dotenv";
 
-const DEFAULT_CLIENT_SIDE_CONTRACT = __dirname+"/zencode/Keypair-Creation-Client-Side.zen";
+const DEFAULT_CLIENT_SIDE_CONTRACT =
+  __dirname + "/zencode/Keypair-Creation-Client-Side.zen";
 const REGULAR_EXPRESSION: RegExp = /\W/gi;
 const EMPTY_STRING: string = "";
 const DEFAULT_USER: string = "user";
@@ -21,7 +22,7 @@ export const getSafetyQuestions = (userLocale: string) => {
     process.env.QUESTION_FILE_PREPEND! +
     locale +
     ".json";
-  const defaultPropertiesFileName = __dirname+"/props/questions-en_GB.json";
+  const defaultPropertiesFileName = __dirname + "/props/questions-en_GB.json";
   let questions: any;
   if (fileExists(propertiesFileName)) {
     questions = readJSONFromFile(propertiesFileName);
