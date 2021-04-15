@@ -1,10 +1,13 @@
 import * as fs from "fs";
 
-export const readJSONFromFile = (filePath: string, defaultFilePath:string) => {
+export const readJSONFromFile = (filePath: string, defaultFilePath: string) => {
   return JSON.parse(readStringFromFile(filePath, defaultFilePath));
 };
 
-export const readStringFromFile = (filePath: string, defaultFilePath:string) => {
+export const readStringFromFile = (
+  filePath: string,
+  defaultFilePath: string
+) => {
   try {
     return fs.readFileSync(filePath).toString();
   } catch (err) {

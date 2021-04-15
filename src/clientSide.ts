@@ -1,9 +1,6 @@
 import { zencode_exec } from "zenroom";
 import { UserChallenges } from "./model/userChallenges";
-import {
-  readJSONFromFile,
-  readStringFromFile,
-} from "./service/fileService";
+import { readJSONFromFile, readStringFromFile } from "./service/fileService";
 import * as dotenv from "dotenv";
 
 const DEFAULT_CLIENT_SIDE_CONTRACT =
@@ -42,7 +39,10 @@ export async function recoveryKeypair(
   username: string
 ) {
   dotenv.config();
-  const CLIENT_SIDE_CONTRACT = readStringFromFile(process.env.CLIENT_SIDE_CONTRACT!, DEFAULT_CLIENT_SIDE_CONTRACT);
+  const CLIENT_SIDE_CONTRACT = readStringFromFile(
+    process.env.CLIENT_SIDE_CONTRACT!,
+    DEFAULT_CLIENT_SIDE_CONTRACT
+  );
   const user = username ? username : DEFAULT_USER;
 
   const keys: any = {
