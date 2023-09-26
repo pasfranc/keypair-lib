@@ -28,7 +28,7 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "zenroom": "^2.2.0-e4ecf22"
+    "zenroom": "^3.18.1"
   },
   "devDependencies": {
     "@types/jest": "^26.0.22",
