@@ -99,11 +99,10 @@ outcome:
         "question5.hash": "dCNOmK/nSY+12vHzasLXiswzlGT5UHA7jAGYkvmCuQs=",
     },
     "user": {
-        "keypair": {
-        "private_key": "VUVdIyPeC+x3o66b+n06Jxc4c3p9TBFfaSiaEPx5FmI=",
-        "public_key":
-            "BDYfET6GOWSTizMYIRfcthw2MKksTpg+f8LR0ndq6fRxOLfhT7d1IjvwkvV0LzlzHuGat8SF9unNwhA3alpQ8So=",
+        "keyring": {
+            "edch": "j4CSgFCZO/oD1D4LxM9lZQcSeBM+r7QV5Bj5KG1Avls=",
         },
+        "edch_public_key": "BAWoSHRZrYHfbIVd/dljETf3VeA5Fah5drZUV3T4Z2Y5IgbRA89c06gF6vh3b+QxZhGLd4dCpipecYfjTEgibnQ=",
     },
 }
 ``` 
@@ -119,8 +118,7 @@ const answers = {
     question5: "null",
 };
 const PBKDF = "qf3skXnPGFMrE28UJS7S8BdT8g==";
-const publicKey =
-    "BDYfET6GOWSTizMYIRfcthw2MKksTpg+f8LR0ndq6fRxOLfhT7d1IjvwkvV0LzlzHuGat8SF9unNwhA3alpQ8So=";
+const publicKey = "BAWoSHRZrYHfbIVd/dljETf3VeA5Fah5drZUV3T4Z2Y5IgbRA89c06gF6vh3b+QxZhGLd4dCpipecYfjTEgibnQ=";
 const username = "user";
 
 const data = await verifyAnswers(answers, PBKDF, username, publicKey);
