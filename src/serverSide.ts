@@ -13,11 +13,11 @@ export async function createPBKDF(userData: any) {
 
   const keys: any = {
     theBackend: {
-      keypair: {
-        private_key: process.env.BACKEND_PRIVATE_KEY,
-        public_key: process.env.BACKEND_PUBLIC_KEY,
+      keyring: {
+        ecdh: process.env.BACKEND_PRIVATE_KEY,
       },
     },
+    public_key: process.env.BACKEND_PUBLIC_KEY,
     theBackendPassword: process.env.BACKEND_PASSWORD,
     userData,
   };

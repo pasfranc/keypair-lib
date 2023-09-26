@@ -23,7 +23,7 @@ test("completeFlow", async () => {
   const data = await createPBKDF(userData);
 
   expect(data).toStrictEqual({
-    key_derivation: "fRODgLOSb2+VMeB3k3IDbGNZxQ==",
+    key_derivation: "xdudVM49pynGxrtC2C8gt/6NP68PvFkpUx0hoGZ5tDY=",
   });
 
   const PBKDF = data.key_derivation;
@@ -59,14 +59,13 @@ test("completeFlow", async () => {
       "question5.hash": "daJd/6yRxfPtiQU+WgM6fbP6hreZi2NeksbkOy02aXo=",
     },
     user: {
-      keypair: {
-        private_key: "+fl3suk5vtnqOJ4nEQYbEfufjvDlIYHs5KET8sVUHlA=",
-        public_key:
-          "BJaPU1BELpo1TE/aUd/MUdx/dD8/Ew7KjodqplCaCaip7lz5dPKXHgATKkIVEH37BYhJHAVAatzyMmf8R6vdgvo=",
+      keyring: {
+        ecdh: "j4CSgFCZO/oD1D4LxM9lZQcSeBM+r7QV5Bj5KG1Avls=",
       },
+      ecdh_public_key: "BAWoSHRZrYHfbIVd/dljETf3VeA5Fah5drZUV3T4Z2Y5IgbRA89c06gF6vh3b+QxZhGLd4dCpipecYfjTEgibnQ=",
     },
   });
-  const publicKey = createdKeypair.user.keypair.public_key;
+  const publicKey = createdKeypair.user.ecdh_public_key;
 
   //5. We will verify that answering to 5/5 questions we obtain same public key
   const allAnswers = {

@@ -10,7 +10,7 @@ test("createPBKDF : pass Andrea userData", async () => {
 
   expect(data).toStrictEqual({
     key_derivation:
-      "IF+tlV3TquNpuXVheRz8vKwkD567Nf9YzrI/AIi5Yr0gX62VXdOq42m5dWF5HPw=",
+      "bzUqFaCWHH6s25u8fSp4F62t9sR79a4hCX9IMCiUhtI=",
   });
 });
 
@@ -22,6 +22,6 @@ test("createPBKDF : pass only email in userData", async () => {
   const data = await createPBKDF(userData);
 
   expect(data).toStrictEqual({
-    key_derivation: "fRODgLOSb2+VMeB3k3IDbGNZxQ==",
+    key_derivation: "xdudVM49pynGxrtC2C8gt/6NP68PvFkpUx0hoGZ5tDY=",
   });
 });
